@@ -9,9 +9,7 @@
 - [Deploy the item catalog project](#deploy-the-item-catalog-project)
 
 ### Introduction
-In this project, I will deploy the [Catalog Item webapp](https://github.com/zhengrui315/Udacity-FSND-Catalog-Item) to a linux server instance. 
-I will choose [Amazon Lightsail](https://aws.amazon.com/lightsail/). Useful tutorials include:
-https://github.com/kcalata/Linux-Server-Configuration/blob/master/README.md and https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps. 
+In this project, I will deploy the [Catalog Item webapp](https://github.com/zhengrui315/Udacity-FSND-Catalog-Item) to [Amazon Lightsail](https://aws.amazon.com/lightsail/). 
 
 ### Get the server
 1, Create a Amazon Lightsail instance. The `platform` is `Linux/Unix`. 
@@ -30,6 +28,11 @@ To connect to the server, run
 ```buildoutcfg
 sudo apt-get update
 sudo apt-get upgrade
+```
+To automate unattended-upgrades process updates:
+```buildoutcfg
+sudo apt-get install unattended-upgrades
+sudo dpkg-reconfigure --priority=low unattended-upgrades
 ```
 4, Change the SSH port from **22** to **2200**. Edit `/etc/ssh/sshd_config` and 
 change the port number on line 5 from 22 to 2200. Also set the value of `PermitRootLogin` to `no`.
@@ -181,6 +184,9 @@ deactivate
 ```
 
 
+### Useful resources:
+- https://github.com/kcalata/Linux-Server-Configuration/blob/master/README.md
+- https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps. 
 
 
 
