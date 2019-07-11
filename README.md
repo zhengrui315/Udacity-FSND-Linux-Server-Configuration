@@ -17,7 +17,7 @@ https://github.com/kcalata/Linux-Server-Configuration/blob/master/README.md and 
 1, Create a Amazon Lightsail instance. The `platform` is `Linux/Unix`. 
 The `blueprint` is `Ubuntu 16.04 LTS`. For the plan, I picked the free first month trial. 
 After the instance starts up, the public IP address will be displayed.
-For my instance, the public IP address is: [34.229.221.174](https://34.229.221.174). 
+For my instance, the public IP address is: [34.229.221.174](http://34.229.221.174). 
 
 2, Log onto the server remotely as user `ubuntu`. In the main page of Lightsail, click `Account`. 
 In the `SSH Keys` tab, click `Download` to download the `pem` file. Rename it `udacity.rsa` and move it to `~/.ssh/`.
